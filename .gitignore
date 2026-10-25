@@ -1,0 +1,13 @@
+# NEVER commit proprietary firmware or any build artifacts containing it
+*.bin
+*.sqfs
+dump/
+rootfs/
+newicons/
+newicons2/
+readback*
+mtd*.bin
+SafeAtHome*
+# scratch
+*.log
+/tmp/

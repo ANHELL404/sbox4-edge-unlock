@@ -1,0 +1,164 @@
+/* ============================================================
+   UTM-1 Edge W — modern skin by ANHELL
+   HYBRID: dark navigation (sidebar + header + status bar) +
+   clean light content. Keeps all SofaWare class names.
+   System fonts, no webfonts.
+   ============================================================ */
+/* nav dark: #0b0e1a / #141a2e  · accent #ec2c84 / #7c5cff
+   content light: bg #f3f5f9 · card #fff · line #e4e8ef · text #1f2937 · muted #6b7280
+   accent-ink (on light) #c81e6a */
+
+* { box-sizing:border-box; }
+html, body { height:100%; }
+.DummyStyle {}
+
+/* ===================== NAV (dark) ===================== */
+.BodySide { background:#0b0e1a; margin:0; padding:8px 8px; border-right:1px solid #1d2336; }
+.BodyTitle { background:#0b0e1a; border:0; border-bottom:3px solid #ec2c84; margin:0; padding:0 16px; }
+.TitleBig { font:600 19px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:#fff; letter-spacing:.2px; }
+.TitleSmall { font:13px "Segoe UI",Arial,sans-serif; color:#8793ad; }
+.Header { color:#fff; font:600 14px "Segoe UI",sans-serif; }
+
+/* left menu */
+.MenuButton, .MenuHelpButton { font:500 13.5px "Segoe UI",Arial,sans-serif; text-align:left; border-bottom:0; }
+.MenuOff { display:flex; align-items:center; gap:11px; padding:10px 12px; margin:1px 4px; border-radius:10px; color:#99a2bf; text-decoration:none; }
+.MenuOff:hover, .MenuHelpOff:hover, .MenuOn:hover, .MenuHelpOn:hover { color:#fff; background:#141a2e; }
+.MenuOn { display:flex; align-items:center; gap:11px; padding:10px 12px; margin:1px 4px; border-radius:10px; color:#fff; font:600 13.5px "Segoe UI",sans-serif; text-decoration:none; background:linear-gradient(90deg,rgba(236,44,132,.20),rgba(124,92,255,.07)); box-shadow:inset 2px 0 0 #ec2c84; }
+.MenuHelpOn { color:#fff; font-weight:600; text-decoration:none; } .MenuHelpOff { color:#99a2bf; text-decoration:none; }
+.MenuOff svg, .MenuOn svg { width:18px; height:18px; stroke:currentColor; stroke-width:1.9; fill:none; flex:none; }
+.MenuButton img { display:none; }
+
+/* status bar */
+.Sbar { background:#0b0e1a; margin:0; border-top:1px solid #1d2336; padding:0 0 0 16px; color:#8793ad; }
+.SbarHead { color:#8793ad; font:12px "Segoe UI",sans-serif; }
+.SbarOK { color:#34d399; font:600 12px "Segoe UI",sans-serif; }
+.SbarDiscon { color:#f87171; } .SbarPend { color:#a5b4fc; }
+.SbarTime { color:#34d399; font:11px "Segoe UI",sans-serif; }
+
+/* ===================== CONTENT (light) ===================== */
+.BodyFrame { background:#f3f5f9; margin:0; padding:0; border:0; }
+.BodyMain { background:#f3f5f9; color:#1f2937; font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; margin:0; padding:0; border:0; }
+.BodySubMenu { background:#f3f5f9; margin:0; padding:0; border:0; }
+
+/* page / section headers */
+.PageTH { background:#111827; color:#fff; }
+.PageTH TD { border-bottom:1px solid #1f2937; }
+.PageTH TABLE TR TD { border-bottom:0; }
+.PageTR { color:#1f2937; } .PageTB {}
+.SectionHeader { border-bottom:1px solid #e4e8ef; font-weight:600; color:#111827; }
+.TradeMark { font-size:11px; color:#9aa3b2; }
+.SmallBold { font-weight:600; font-size:12px; } .Smaller { font-size:12px; color:#6b7280; }
+
+/* messages */
+.TWarnings { color:#fff; font-weight:600; }
+.MsgErr { color:#dc2626; font-weight:600; } .MsgWarn { color:#d97706; font-weight:600; } .MsgOK { color:#16a34a; font-weight:600; } .MsgDis { color:#9aa3b2; }
+.MsgRegErr { color:#dc2626; } .MsgRegWarn { color:#d97706; } .MsgRegOK { color:#16a34a; }
+.Status {}
+.PopLayerText { background:#fffbe6; color:#1f2937; font:14px "Segoe UI",sans-serif; border:1px solid #e4e8ef; border-radius:8px; }
+
+/* sub-menu tabs (content frame) — clean flat tabs, caps hidden */
+.SubMenuButton { font:600 13px "Segoe UI",sans-serif; text-align:left; }
+.SubMenu { border-bottom:1px solid #e4e8ef; }
+img.scap { display:none !important; }
+.SubMenuOffBg { background:#eceff5; height:36px; border:0; padding:0; border-radius:9px 9px 0 0; }
+.SubMenuOff { display:inline-block; color:#475467; text-decoration:none; padding:9px 16px; font-weight:600; } .SubMenuOff:hover { color:#be185d; }
+.SubMenuOnBg { background:#fff; height:36px; border:0; padding:0; border-radius:9px 9px 0 0; box-shadow:inset 0 -3px 0 #be185d; }
+.SubMenuOn { display:inline-block; color:#111827; text-decoration:none; padding:9px 16px; font-weight:700; } .SubMenuOn:hover { color:#111827; }
+
+/* ---- buttons (createButtonImpl rewritten to plain inputs): calm solid style ---- */
+input.ButtonOff, input.Button, input[type=submit], input[type=button] {
+  background:#be185d; color:#fff; border:0; border-radius:8px;
+  padding:8px 16px; font:600 13px "Segoe UI",sans-serif; cursor:pointer; box-shadow:0 1px 2px rgba(190,24,93,.22); }
+input.ButtonOff:hover, input.ButtonOn { background:#9d1450; color:#fff; border:0; border-radius:8px; padding:8px 16px; font:600 13px "Segoe UI",sans-serif; cursor:pointer; }
+input.ButtonDis { background:#e8eaf0; color:#9aa3b2; border:0; border-radius:8px; padding:8px 16px; cursor:default; box-shadow:none; }
+.Button { background:transparent; border:0; }
+/* small inline (edit/delete) buttons inside tables: outlined */
+input.ButtonLinkOff, input.ButtonLinkOn, input.ButtonLinkDis {
+  background:#fff; color:#be185d; border:1px solid #e4cbd9; border-radius:7px; padding:5px 11px;
+  font:600 12.5px "Segoe UI",sans-serif; cursor:pointer; box-shadow:none; }
+input.ButtonLinkOn { background:#be185d; color:#fff; border-color:#be185d; }
+input.ButtonLinkDis { color:#b9c0cc; border-color:#eceff5; cursor:default; }
+.ButtonLink { background:none !important; padding:0; margin:0; }
+.ButtonRealLink { color:#c81e6a; text-decoration:none; font-weight:600; }
+.ButtonRealLink:hover { color:#ec2c84; text-decoration:underline; cursor:pointer; }
+
+/* sliders */
+.Slider { color:#1f2937; text-align:left; } .SliderDis { color:#9aa3b2; text-align:left; }
+.SliderBg { position:relative; z-index:5; } .SliderDrag { position:absolute; z-index:10; visibility:hidden; }
+
+/* tables / cards */
+.Tab { background:#fff; color:#1f2937; border:1px solid #e4e8ef; border-radius:12px; }
+.TabGrid { background:#fff; color:#1f2937; font:13px "Segoe UI",sans-serif; } .TabGrid TD { white-space:nowrap; }
+.TabHead { background:#f6f8fc; }
+.TabHead TH, .TabHead TD { border-bottom:2px solid #ec2c84; font:600 12px "Segoe UI",sans-serif; color:#475467; text-transform:uppercase; letter-spacing:.05em; padding:11px 16px; }
+.TabRow0 { background:#fafbfe; color:#1f2937; } .TabRow1 { background:#fff; color:#1f2937; }
+.TabRow0 td, .TabRow1 td { padding:10px 16px; border-bottom:1px solid #eef1f6; }
+.TabRow0:hover td, .TabRow1:hover td { background:#fdf2f8; }
+.TabFieldHeader { color:#6d28d9; }
+.TabPorts { background:#eef1f6; color:#1f2937; }
+.TabDiag { background:#eef1f6; color:#1f2937; }
+.TabBorBt { border-bottom:1px solid #e4e8ef; } .TabBorLf { border-left:1px solid #e4e8ef; } .TabBorBtLf { border-bottom:1px solid #e4e8ef; border-left:1px solid #e4e8ef; }
+
+/* reports */
+.RepTab { background:#fff; font:13px "Segoe UI",sans-serif; color:#1f2937; } .RepTab TD { white-space:nowrap; }
+.ReportsHead { background:#f6f8fc; text-align:left; color:#475467; }
+.ReportsMsg TD, .ReportsMsg TD A, .ReportsMsg TD A:hover { background:#fff; color:#4338ca; }
+.ReportsAccept TD, .ReportsAccept TD A, .ReportsAccept TD A:hover { background:#fff; color:#16a34a; }
+.ReportsBlocked TD, .ReportsBlocked TD A, .ReportsBlocked TD A:hover { background:#fff; color:#dc2626; }
+.ReportsWarn TD, .ReportsWarn TD A, .ReportsWarn TD A:hover { background:#fff; color:#d97706; }
+div.gridbox table.hdr td { font:600 12px "Segoe UI",sans-serif; background:#f6f8fc; border:1px solid #e4e8ef; color:#475467; text-align:left; margin:0; padding:3px 8px; overflow:hidden; }
+.GraphAxisHead { color:#1f2937; font-size:13px; } .GraphAxisData { color:#6b7280; font-size:11px; } .GraphLeg { color:#6b7280; font-size:11px; }
+
+/* wizard */
+@media print { .WizBody,.WizBody P,.WizBodyWait,.WizSide{color:#000;font-size:13px;} .WizHeader{font-weight:600;font-size:120%;} .WizInputAsText{color:#000;border:0;} }
+@media screen {
+.WizBody,.WizBody P { background:#f3f5f9; color:#1f2937; font-family:-apple-system,"Segoe UI",sans-serif; margin:0; padding:0; border:0; }
+.WizBodyWait { background:#f3f5f9; color:#1f2937; font-family:-apple-system,"Segoe UI",sans-serif; margin:0; padding:0; border:0; cursor:wait; }
+.WizSide { background:#eceff5; }
+.WizHeader { font:600 18px "Segoe UI",sans-serif; color:#111827; }
+.WizInputAsText { border:0; color:#1f2937; background:transparent; }
+}
+.WizTForm{width:120px;}.WizTForm2{width:60px;}.WizTForm3{width:240px;}.WizTTime{color:#6d28d9;}
+
+/* net status */
+.NetText{color:#1f2937;}.NetTextBox,.NetNotActive{color:#4338ca;}.NetNoLicense{color:#dc2626;}.NetLicensed{color:#16a34a;}
+
+/* scroll divs */
+.InternalScrollDiv1{background:#fff;color:#1f2937;font-family:"Segoe UI",sans-serif;font-size:14px;border:1px solid #e4e8ef;border-radius:8px;overflow:auto;}
+.InternalScrollDiv2{background:#fff;color:#1f2937;font-family:"Segoe UI",sans-serif;font-size:14px;padding:0;margin:2px;border:0;overflow:auto;}
+.InternalScrollDiv3{background:#fff;color:#1f2937;font-family:"Segoe UI",sans-serif;font-size:14px;padding:0;margin:0;border:0;border-bottom:1px solid #e4e8ef;overflow:auto;}
+
+/* dyn gui */
+.DynGuiPageHead TD{color:#111827;font-weight:600;border-bottom:1px solid #e4e8ef;padding-bottom:3px;}
+.DynGuiPageDesc TD{color:#6b7280;border:0;font-weight:400;border-bottom:1px solid #e4e8ef;padding-bottom:3px;}
+.DynGuiSecHead{color:#111827;font-weight:600;}.DynGuiCap{color:#4338ca;font-weight:400;}
+.DynGuiData{color:#1f2937;font-weight:400;}.DynGuiTreeObj{color:#1f2937;font-weight:400;}.DynGuiTreeObjSel{color:#111827;font-weight:600;}
+
+/* popups */
+.PopBody{background:#fff;color:#1f2937;font-family:"Segoe UI",sans-serif;margin:1px;}
+.PopBody H2,.PopBody P,.PopBody PRE{color:#1f2937;}
+
+/* links & inputs */
+.Link{color:#c81e6a;text-decoration:none;font-weight:600;}.Link:hover{color:#ec2c84;text-decoration:underline;}
+.frmElm{width:200px;}.frmElmS{width:110px;}.frmElmS2{width:94px;}.frmElmS3{width:150px;}
+input[type=text],input[type=password],input[type=number],textarea,select{
+  background:#fff;color:#1f2937;border:1px solid #cfd6e4;border-radius:8px;padding:7px 10px;font:14px "Segoe UI",sans-serif;outline:none;}
+input[type=text]:focus,input[type=password]:focus,textarea:focus,select:focus{border-color:#ec2c84;box-shadow:0 0 0 3px rgba(236,44,132,.18);}
+
+/* bigger log/table text */
+.RepTab, .RepTab TD { font-size:14px; }
+.Tab td, .TabRow0 td, .TabRow1 td { font-size:13.5px; }
+/* slider (security level): notch rows must stay exactly 18px (NOTCH_PIXELS)
+   so the draggable lever lines up with the labels; block images kill the
+   inline-descender gap that was pushing each row taller than 18px. */
+.SliderBg table { border-collapse:collapse; line-height:0; }
+.SliderBg table td { padding:0; margin:0; height:18px; line-height:18px; vertical-align:middle; }
+.SliderBg img { display:block; }
+.Slider, .SliderDis { line-height:18px; height:18px; vertical-align:middle; font:13px "Segoe UI",sans-serif; padding:0 0 0 8px; white-space:nowrap; }
+
+IMG{border:0;padding:0;margin:0;}
+H1,H2{font-weight:600;font-size:120%;color:#111827;}
+HR{color:#e4e8ef;background:#e4e8ef;border:0;height:1px;}
+FORM{border:0;padding:0;margin:0;}
+TABLE{font-size:14px;empty-cells:show;}
+A{color:#c81e6a;}
