@@ -44,11 +44,9 @@ bootloader accepts the image.
 - A Linux box (WSL works) with: `python3`, `binutils-mips-linux-gnu` (`mips-linux-gnu-objdump`),
   `librsvg2-bin` (`rsvg-convert`), `imagemagick` (`convert`), and `squashfs-tools`:
   **unsquashfs 4.x** to extract, **mksquashfs 3.x** to pack. The 2.6.27 kernel uses squashfs 3.x —
-  a 4.x image will **not** boot. Build 3.4 from source:
+  a 4.x image will **not** boot. Build 3.4 with the helper (then use the `export` line it prints):
   ```bash
-  make -C squashfs-tools \
-    EXTRA_CFLAGS="-fcommon -fgnu89-inline -include sys/sysmacros.h -I." mksquashfs
-  export MKSQUASHFS=$PWD/squashfs-tools/mksquashfs
+  ./tools/build-squashfs34.sh
   ```
 
 ### Step 1 — root shell
@@ -148,11 +146,10 @@ Theme: [`theme/styles_hybrid.css`](theme/styles_hybrid.css). Icons: `scripts/gen
 - Linux (подойдёт WSL) с: `python3`, `binutils-mips-linux-gnu` (`mips-linux-gnu-objdump`),
   `librsvg2-bin` (`rsvg-convert`), `imagemagick` (`convert`) и `squashfs-tools`:
   **unsquashfs 4.x** для распаковки, **mksquashfs 3.x** для упаковки. Ядро 2.6.27 использует
-  squashfs 3.x — образ 4.x **не загрузится**. Сборка 3.4 из исходников:
+  squashfs 3.x — образ 4.x **не загрузится**. Собери 3.4 хелпером (и используй строку `export`,
+  которую он выведет):
   ```bash
-  make -C squashfs-tools \
-    EXTRA_CFLAGS="-fcommon -fgnu89-inline -include sys/sysmacros.h -I." mksquashfs
-  export MKSQUASHFS=$PWD/squashfs-tools/mksquashfs
+  ./tools/build-squashfs34.sh
   ```
 
 ### Шаг 1 — root-шелл
