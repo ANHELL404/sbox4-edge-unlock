@@ -1,5 +1,11 @@
 # SBOX4 Edge Unlock
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![arch](https://img.shields.io/badge/arch-MIPS%20BE%20(Octeon)-blue)
+![firmware](https://img.shields.io/badge/firmware-8.2.55n-orange)
+![device](https://img.shields.io/badge/device-UTM--1%20Edge%20W-informational)
+[![stars](https://img.shields.io/github/stars/ANHELL404/sbox4-edge-unlock?style=social)](https://github.com/ANHELL404/sbox4-edge-unlock/stargazers)
+
 A community **patch-kit** that revives end-of-life **Check Point UTM-1 Edge (W) / SofaWare SBOX4**
 appliances: it unlocks the licensed features that can no longer be bought, removes the dead
 subscription menus, and reskins the 2007-era web GUI into a clean modern dark/light theme.
